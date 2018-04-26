@@ -10,56 +10,86 @@ namespace BM.I317
     class Program
     {
         static void Main(string[] args)
-        {   //宣告馬力歐BEEP音
-            Console.Beep(659, 125); Console.Beep(659, 125); Thread.Sleep(125); Console.Beep(659, 125); Thread.Sleep(167); Console.Beep(523, 125); Console.Beep(659, 125); Thread.Sleep(125); Console.Beep(784, 125); Thread.Sleep(375); Console.Beep(392, 125); Thread.Sleep(375); Console.Beep(523, 125); Thread.Sleep(250); Console.Beep(392, 125); Thread.Sleep(250); Console.Beep(330, 125); Thread.Sleep(250); Console.Beep(440, 125); Thread.Sleep(125); Console.Beep(494, 125); Thread.Sleep(125); Console.Beep(466, 125); Thread.Sleep(42); Console.Beep(440, 125); Thread.Sleep(125); Console.Beep(392, 125); Thread.Sleep(125); Console.Beep(659, 125); Thread.Sleep(125); Console.Beep(784, 125); Thread.Sleep(125); Console.Beep(880, 125); Thread.Sleep(125); Console.Beep(698, 125); Console.Beep(784, 125); Thread.Sleep(125); Console.Beep(659, 125); Thread.Sleep(125); Console.Beep(523, 125); Thread.Sleep(125); Console.Beep(587, 125); Console.Beep(494, 125); Thread.Sleep(125); Console.Beep(523, 125); Thread.Sleep(250); Console.Beep(392, 125); Thread.Sleep(250); Console.Beep(330, 125); Thread.Sleep(250); Console.Beep(440, 125); Thread.Sleep(125); Console.Beep(494, 125); Thread.Sleep(125); Console.Beep(466, 125); Thread.Sleep(42); Console.Beep(440, 125); Thread.Sleep(125); Console.Beep(392, 125); Thread.Sleep(125); Console.Beep(659, 125); Thread.Sleep(125); Console.Beep(784, 125); Thread.Sleep(125); Console.Beep(880, 125); Thread.Sleep(125); Console.Beep(698, 125); Console.Beep(784, 125); Thread.Sleep(125); Console.Beep(659, 125); Thread.Sleep(125); Console.Beep(523, 125); Thread.Sleep(125); Console.Beep(587, 125); Console.Beep(494, 125); Thread.Sleep(375); Console.Beep(784, 125); Console.Beep(740, 125); Console.Beep(698, 125); Thread.Sleep(42); Console.Beep(622, 125); Thread.Sleep(125); Console.Beep(659, 125); Thread.Sleep(167); Console.Beep(415, 125); Console.Beep(440, 125); Console.Beep(523, 125); Thread.Sleep(125); Console.Beep(440, 125); Console.Beep(523, 125); Console.Beep(587, 125); Thread.Sleep(250); Console.Beep(784, 125); Console.Beep(740, 125); Console.Beep(698, 125); Thread.Sleep(42); Console.Beep(622, 125); Thread.Sleep(125); Console.Beep(659, 125); Thread.Sleep(167); Console.Beep(698, 125); Thread.Sleep(125); Console.Beep(698, 125); Console.Beep(698, 125); Thread.Sleep(625); Console.Beep(784, 125); Console.Beep(740, 125); Console.Beep(698, 125); Thread.Sleep(42); Console.Beep(622, 125); Thread.Sleep(125); Console.Beep(659, 125); Thread.Sleep(167); Console.Beep(415, 125); Console.Beep(440, 125); Console.Beep(523, 125); Thread.Sleep(125); Console.Beep(440, 125); Console.Beep(523, 125); Console.Beep(587, 125); Thread.Sleep(250); Console.Beep(622, 125); Thread.Sleep(250); Console.Beep(587, 125); Thread.Sleep(250); Console.Beep(523, 125); Thread.Sleep(1125); Console.Beep(784, 125); Console.Beep(740, 125); Console.Beep(698, 125); Thread.Sleep(42); Console.Beep(622, 125); Thread.Sleep(125); Console.Beep(659, 125); Thread.Sleep(167); Console.Beep(415, 125); Console.Beep(440, 125); Console.Beep(523, 125); Thread.Sleep(125); Console.Beep(440, 125); Console.Beep(523, 125); Console.Beep(587, 125); Thread.Sleep(250); Console.Beep(784, 125); Console.Beep(740, 125); Console.Beep(698, 125); Thread.Sleep(42); Console.Beep(622, 125); Thread.Sleep(125); Console.Beep(659, 125); Thread.Sleep(167); Console.Beep(698, 125); Thread.Sleep(125); Console.Beep(698, 125); Console.Beep(698, 125); Thread.Sleep(625); Console.Beep(784, 125); Console.Beep(740, 125); Console.Beep(698, 125); Thread.Sleep(42); Console.Beep(622, 125); Thread.Sleep(125); Console.Beep(659, 125); Thread.Sleep(167); Console.Beep(415, 125); Console.Beep(440, 125); Console.Beep(523, 125); Thread.Sleep(125); Console.Beep(440, 125); Console.Beep(523, 125); Console.Beep(587, 125); Thread.Sleep(250); Console.Beep(622, 125); Thread.Sleep(250); Console.Beep(587, 125); Thread.Sleep(250); Console.Beep(523, 125);
+        {
+            // 將視窗標題設為BMI計算機
+            Console.Title = "BMI計算機";
 
-            // 宣告變數
-            double BMI;
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.WriteLine("BMI計算機" + "\n");
 
-            // 設定字顏色
-            Console.ForegroundColor = ConsoleColor.Red;
+            // 輸入身高體重
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.Write("請輸入體重(公斤):");
+            string kg = Console.ReadLine();
+            Console.Write("請輸入身高(公分):");
+            string tall = Console.ReadLine();
 
-            // 介面、輸入數值
-            Console.WriteLine("請輸入你的體重(公斤):");
+            // 將身高單位轉換為公尺
+            double newTall = double.Parse(tall) / 100;
 
-            double weight = double.Parse(Console.ReadLine());
+            // 計算BMI結果並顯示 
+            double BMI = Math.Round(double.Parse(kg) / newTall, 2);
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("\n" + "BMI值為:" + BMI + "\n");
 
-
-            Console.WriteLine("請輸入你的身高(公分):");
-
-            double height = double.Parse(Console.ReadLine());
-
-            // 設定BMI公式
-            BMI = weight / (height/100) * (height/100);
-
-            // 判斷體重等級
-             
-            if (BMI < 20)
-
+            // 判斷BMI是否過重或符合免兵役標準
+            if (BMI < 18.5)
             {
-                Console.WriteLine("過輕，多吃一點身體會變得更健康喔！");
+                if (BMI < 16.5)
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("※符合免兵役標準");
+                }
+                Console.ForegroundColor = ConsoleColor.Gray;
+                Console.WriteLine("您的體重過輕!:OOOOOOOO" + "\n" + "快多吃點飯飯!");
             }
 
-            if (BMI >= 20 && BMI <= 25)
-
+            else if (BMI >= 18.5 && BMI < 24)
             {
-                Console.WriteLine("正常，你不會想變成我這樣肥胖的傢伙");
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("您的BMI指數正常:)");
             }
 
-            if (BMI > 25 && BMI <= 28)
 
+            else if (BMI >= 24 && BMI < 27)
             {
-                Console.WriteLine("過重，少吃一點身體就會變得更健康喔！");
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("您過重囉!");
             }
 
-            if(BMI > 28)
-
+            else if (BMI >= 27 && BMI < 30)
             {
-                Console.WriteLine("肥胖，恭喜你因為太胖所以免役！呵呵");
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("您屬於【輕度肥胖】:(");
             }
 
+            else if (BMI >= 30 && BMI < 35)
+            {
+                if (BMI > 31.5)
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("※符合免兵役標準");
+                }
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("您屬於【中度肥胖】:((");
+            }
+
+            else if (BMI >= 35)
+            {
+                if (BMI > 31.5)
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("※符合免兵役標準");
+                }
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("您屬於【重度肥胖】:(((" + "\n" + "☆聰明吃-正確飲食觀：請搜尋衛生福利部國民健康署");
+            }
+
+            // 讀取
             Console.WriteLine("請按1退出視窗");
-
+            Console.ReadLine();
+        
+            
             // 秀動畫，加分用
             int Joke = int.Parse(Console.ReadLine());
 
