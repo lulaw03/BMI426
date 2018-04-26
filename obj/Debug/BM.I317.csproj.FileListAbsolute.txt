@@ -1,0 +1,7 @@
+C:\Users\user\Desktop\BM.I317\BM.I317\bin\Debug\BM.I317.exe.config
+C:\Users\user\Desktop\BM.I317\BM.I317\bin\Debug\BM.I317.exe
+C:\Users\user\Desktop\BM.I317\BM.I317\bin\Debug\BM.I317.pdb
+C:\Users\user\Desktop\BM.I317\BM.I317\obj\Debug\BM.I317.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\BM.I317\BM.I317\obj\Debug\BM.I317.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\BM.I317\BM.I317\obj\Debug\BM.I317.exe
+C:\Users\user\Desktop\BM.I317\BM.I317\obj\Debug\BM.I317.pdb
